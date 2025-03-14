@@ -1,0 +1,117 @@
+.list-container {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 24px; /* Reduced font size */
+    font-weight: 600;
+  }
+  
+  .food-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 20px auto; /* Table placed at the top with spacing below */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Reduced table font size */
+  }
+  
+  .food-table th {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 14px; /* Reduced header font size */
+    text-transform: uppercase;
+    padding: 10px 12px; /* Adjusted padding */
+    font-weight: bold;
+  }
+  
+  .food-table td {
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    font-size: 12px; /* Smaller font size */
+    color: #34495e;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+  }
+  
+  .food-table tr:hover {
+    background: #f5f8fa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .food-image {
+    width: 50px; /* Reduced image size */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #6a11cb;
+  }
+  
+  .action-btn {
+    padding: 6px 12px; /* Smaller button size */
+    font-size: 12px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff6b81, #ff7b54);
+  }
+  
+  @media (max-width: 768px) {
+    .food-table th, .food-table td {
+      padding: 8px; /* Reduced padding for smaller screens */
+    }
+  
+    .food-image {
+      width: 40px; /* Further reduced image size */
+      height: 40px;
+    }
+  
+    .food-table td {
+      font-size: 10px; /* Smaller font for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food-table {
+      font-size: 10px;
+    }
+  
+    .food-table td {
+      display: block;
+      text-align: left;
+      padding: 10px;
+    }
+  
+    .food-table th {
+      display: none;
+    }
+  
+    .food-table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #2c3e50;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+  
+    .action-btn {
+      padding: 4px 10px; /* Smallest button size */
+      font-size: 10px;
+    }
+  }
+  

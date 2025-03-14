@@ -1,0 +1,33 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0; /* Ensure padding is properly set */
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+  font-family: 'Outfit'; /* Use the imported font */
+}
+
+/* Body styling */
+body {
+  font-weight: 100vh; /* Default font weight */
+  background-color: #f4f4f9; /* Light background color */
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+hr{
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+
+
+.app-content{display: flex;}

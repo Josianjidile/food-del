@@ -1,0 +1,47 @@
+.sidebar {
+  width: 18%; /* Set width for the sidebar */
+  min-height: 100vh; /* Full viewport height */
+  border-right: 1.5px solid #a9a9a9;
+  border-top: 0;
+  font-size: max(1vw, 10px);
+  overflow-y: auto; /* Adds vertical scrolling if content overflows */
+}
+
+.sidebar-options {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 20%;
+  flex-direction: column;
+  gap: 1.5rem; /* Consistent space between options */
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #a9a9a9;
+  border-right: 0;
+  gap: 12px; /* Space between icon and text */
+  padding: 8px 10px; /* Padding for better touch targets */
+  border-radius: 3px 0px 0px 3px; /* Rounded corners */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  text-decoration: none; /* Ensures no underline */
+  color: inherit; /* Inherits text color */
+}
+
+
+.sidebar-option:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+@media (max-width: 900px) {
+  .sidebar-option p {
+    display: none; /* Hides the text on smaller screens */
+  }
+
+  .sidebar-option img {
+    width: 20px; /* Adjusts icon size */
+    height: 20px;
+  }
+}
