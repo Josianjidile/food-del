@@ -1,0 +1,146 @@
+.navbar {
+    position: sticky; /* Sticks to the top */
+    top: 0; /* Ensures it stays at the top */
+    z-index: 1000; /* Keeps it above other elements */
+    background-color: white; /* Background to avoid content overlapping */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #45597e;
+    font-size: 18px;
+    margin-right: 20px; /* Adds space between logo and search button */
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #45597e;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover {
+    color: tomato; /* Highlight effect on hover */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: auto; /* Ensures button width adjusts based on text */
+    max-width: 150px; /* Prevents the button from being too wide */
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+    color: tomato;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+    animation: fadeId 3s;
+}
+
+/* Profile dropdown styles */
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #49557e;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-profile-dropdown li:hover {
+    background-color: #f5f5f5;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Mobile styles */
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none; /* Hide menu for smaller screens */
+    }
+
+    .navbar-right {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+
+    .navbar button {
+        padding: 8px 20px; /* Smaller padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+/* Future-proof for collapsible menu */
+@media (max-width: 750px) {
+    .navbar-menu.collapsible {
+        display: block; /* Example for collapsible menu if implemented */
+        flex-direction: column;
+        gap: 10px;
+    }
+}
